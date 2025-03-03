@@ -1,10 +1,3 @@
-"""
-Copyright © Krypton 2019-Present - https://github.com/kkrypt0nn (https://krypton.ninja)
-Description:
-🐍 A simple template to start to code your own and personalized Discord bot in Python
-
-Version: 6.2.0
-"""
 
 import json
 import logging
@@ -13,21 +6,6 @@ import platform
 import random
 import sys
 
-import aiosqlite
-import discord
-from discord.ext import commands, tasks
-from discord.ext.commands import Context
-from dotenv import load_dotenv
-
-from database import DatabaseManager
-
-if not os.path.isfile(f"{os.path.realpath(os.path.dirname(__file__))}/config.json"):
-    sys.exit("'config.json' not found! Please add it and try again.")
-else:
-    with open(f"{os.path.realpath(os.path.dirname(__file__))}/config.json") as file:
-        config = json.load(file)
-
-"""	
 Setup bot intents (events restrictions)
 For more information about intents, please go to the following websites:
 https://discordpy.readthedocs.io/en/latest/intents.html
